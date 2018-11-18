@@ -1,0 +1,21 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success' : like > unLike ,
+                 'list-group-item-danger' : unLike > like }">
+
+<div class="row">
+
+  <div class="col-sm-8">
+    <h4>{{postTitle}}</h4>
+  </div>
+
+  <div class="col-sm-4">
+    <h4>Mise à jour {{ lastUpdate | date : 'short' }}</h4>
+  </div>
+
+
+</div>
+
+  <p> {{postContent}}</p>
+  <button class="btn btn-success" (click)="onLike()">Like</button>
+  <button class="btn btn-danger" (click)="onUnLike()">UnLike</button>
+</li>
